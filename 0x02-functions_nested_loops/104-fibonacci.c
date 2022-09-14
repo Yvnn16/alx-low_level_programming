@@ -13,7 +13,7 @@ unsigned long m, n, p, carry;
 
 count = 0;
 i = 0;
-amount = 100;/*10^2*/
+j = 1;
 for (count = 1; count <= 91; count++)
 {
 k = i + j;
@@ -21,14 +21,14 @@ i = j;
 j = k;
 printf("%lu, ", k);
 }
-m = i % amount;
-i = i / amount;
-n = j % amount;
-j = j / amount;
+m = i % 100;
+i = i / 100;
+n = j % 100;
+j = j / 100;
 while (count <= 98)
 {
-carry = (m + n) / amount;
-p = (m + n) -carry * amount;
+carry = (m + n) / 100;
+p = (m + n) -carry * 100;
 k = (i + j) +carry;
 m = n;
 n = p;
