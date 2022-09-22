@@ -33,3 +33,5 @@ if (str[index - 1] == ' ' ||
 
 index++;
 }
+return (str);
+}
